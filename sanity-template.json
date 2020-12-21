@@ -54,7 +54,7 @@
         "buildSettings": {
           "base": "web",
           "dir": "public",
-          "cmd": "yarn install && yarn build"
+          "cmd": "yarn install && gatsby build"
         },
         "requirements": ["build-hook"]
       }
