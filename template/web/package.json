@@ -24,6 +24,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "build-client": "(cd ../studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN yarn graphql-deploy) && (cd ../web && yarn build)",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
