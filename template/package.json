@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "sanity-template-catalyst",
+  "name": "sanity-template-catalyst-folder",
   "version": "0.0.1",
   "scripts": {
     "build": "lerna run build --parallel",
