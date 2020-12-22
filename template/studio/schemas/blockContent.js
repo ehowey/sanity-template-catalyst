@@ -79,5 +79,8 @@ export default {
     {
       type: "figure",
     },
+    {
+      type: "figureWide",
+    },
   ],
 }

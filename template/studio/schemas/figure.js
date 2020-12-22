@@ -9,8 +9,7 @@ export default {
     {
       title: "Caption",
       name: "caption",
-      description:
-        "Leave blank if you do not want a caption, also used for photo credits.",
+      description: "Leave blank if you do not want a caption",
       type: "string",
       options: {
         isHighlighted: true,
@@ -20,7 +19,7 @@ export default {
       name: "alt",
       type: "string",
       title: "Alternative text",
-      validation: (Rule) =>
+      validation: Rule =>
         Rule.error("You have to fill out the alternative text.").required(),
       description: "Important for SEO and accessiblity.",
       options: {

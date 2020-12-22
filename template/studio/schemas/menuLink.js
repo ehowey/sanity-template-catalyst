@@ -27,7 +27,7 @@ export default {
       name: "location",
       type: "string",
       description:
-        "Does not apply to this theme, used in other themes and cannot be removed.",
+        "Affects the visual location of the links for the top menu bar only. Allows for a 'split' link design. Does not affect some themes.",
       options: {
         list: [
           { title: "Left", value: "left" },
@@ -35,6 +35,7 @@ export default {
         ], // <-- predefined values
         layout: "radio", // <-- defaults to 'dropdown'
       },
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "Link type",

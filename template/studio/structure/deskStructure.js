@@ -1,6 +1,12 @@
-import S from "@sanity/desk-tool/structure-builder"
-import { MdSettings, MdShare, MdList, MdInfo, MdPerson } from "react-icons/md"
-import { RiLayoutTopLine } from "react-icons/ri"
+import S from "@sanity/desk-tool/structure-builder";
+import {
+  MdSettings,
+  MdShare,
+  MdList,
+  MdInfo,
+  MdPerson,
+  MdDashboard,
+} from "react-icons/md";
 
 const hiddenDocTypes = (listItem) =>
   ![
@@ -14,9 +20,7 @@ const hiddenDocTypes = (listItem) =>
     "theme",
     "themeLmColor",
     "themeDmColor",
-    "siteHeader",
-    "category",
-  ].includes(listItem.getId())
+  ].includes(listItem.getId());
 
 export default () =>
   S.list()
@@ -52,32 +56,27 @@ export default () =>
                 .title("Social Links")
                 .icon(MdShare)
                 .child(S.documentTypeList("socialLink").title("Social Links")),
+              S.listItem()
+                .title("Theme-UI")
+                .icon(MdDashboard)
+                .child(
+                  S.document()
+                    .schemaType("theme")
+                    .documentId("theme")
+                    .title("Theme-UI Theme")
+                ),
             ])
         ),
       // Add a visual divider (optional)
       S.divider(),
       S.listItem()
-        .title("Header")
-        .icon(RiLayoutTopLine)
-        .child(S.editor().schemaType("siteHeader").documentId("siteHeader")),
-      S.listItem()
         .title("Pages")
         .child(S.documentTypeList("page").title("Pages")),
       S.listItem()
         .title("Posts")
-        .child(
-          S.list()
-            .title("Posts")
-            .items([
-              S.listItem()
-                .title("All Posts")
-                .schemaType("post")
-                .child(S.documentTypeList("post").title("All Posts")),
-              S.listItem()
-                .title("Categories")
-                .schemaType("category")
-                .child(S.documentTypeList("category").title("Categories")),
-            ])
-        ),
+        .child(S.documentTypeList("post").title("Posts")),
+      S.listItem()
+        .title("Projects")
+        .child(S.documentTypeList("project").title("Projects")),
       ...S.documentTypeListItems().filter(hiddenDocTypes),
-    ])
+    ]);

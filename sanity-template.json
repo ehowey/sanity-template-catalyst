@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "title": "Sanity Template Bery",
-  "description": "A minimalist personal blog featuring a Gatsby frontend, automatic RSS feeds, and sortable posts.",
+  "title": "Sanity Template Catalyst",
+  "description": "Minimal and barebones integration of Gatsby-Theme-Catalyst and SANITY.io",
   "previewMedia": {
     "type": "image",
-    "src": "assets/catalyst-bery-preview.jpg",
+    "src": "assets/catalyst-sanity-preview.jpg",
     "alt": "Gatsby Theme Catalyst"
   },
   "technologies": [
@@ -48,7 +48,7 @@
         "dir": "./web",
         "previewMedia": {
           "type": "image",
-          "src": "assets/catalyst-bery-preview.jpg",
+          "src": "assets/sanity-template-catalyst-web.png",
           "alt": "A preview image of the webpage."
         },
         "buildSettings": {
