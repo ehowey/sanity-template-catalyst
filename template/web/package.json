@@ -6,7 +6,6 @@
   "author": "Eric Howey <eric@erichowey.dev>",
   "dependencies": {
     "gatsby": "^2.24.58",
-    "gatsby-cli": "^2.16.1",
     "gatsby-theme-catalyst-core": "^3.0.0",
     "gatsby-theme-catalyst-footer": "^1.2.3",
     "gatsby-theme-catalyst-header-side": "^1.3.4",
@@ -25,7 +24,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build-client": "(cd ../studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN yarn graphql-deploy) && (cd ../web && yarn build)",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
